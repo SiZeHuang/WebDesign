@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="./jquery-3.4.1.js"></script> 
+<script>
+    //判斷網頁是否支援web storage
+    $(function(){
+        if($.type(Storage)==="undefined")
+          alert("Sorry! 您的瀏覽器不支援 Web storage");
+    })
+</script>   
+</head> 
+<body>
+   <button id="btn_login">登入</button>
+   <button id="btn_logout">登出</button><br><br>
+   請輸入姓名:<input type="text" id="input_txt" value=""><br>
+   <button id="btn_send">送出</button>
+</body>  
+</html>    
