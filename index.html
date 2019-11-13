@@ -11,12 +11,20 @@
               alert("Sorry! 您的瀏覽器不支援 Web storage")            
           else{
               $("#btn_login").click(loginButtonHandler);
+              $("#btn_send").click(sendButtonHandler);
         }
 
         //按下登入鈕後顯示輸入姓名框及送出鈕
         function loginButtonHandler(){
-               $(div_show).show();
+               $("#div_show").show();
         }
+
+        //儲存輸入姓名
+        function sendButtonHandler(){
+               localStorage.setItem("member",$("#input_txt").val());
+               $("#txt_show").html("送出成功!");
+        }
+        
     })
 </script>   
 </head> 
@@ -25,5 +33,6 @@
    <button id="btn_logout">登出</button><br><br>
    <div id="div_show">請輸入姓名:<input type="text" id="input_txt" value=""><br>
    <button id="btn_send">送出</button></div>
+   <div id="txt_show"></div>
 </body>  
 </html>    
